@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "IG Canvas Stories",
+    "slug": "ig-canvas-stories",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "igcanvas",
+    "ios": {
+      "bundleIdentifier": "com.yourcompany.igcanvasstories",
+      "infoPlist": {
+        "NSCameraUsageDescription": "We need camera access so you can capture a photo to edit and share.",
+        "NSPhotoLibraryAddUsageDescription": "We save your edited photo to your library when you tap Export.",
+        "LSApplicationQueriesSchemes": [
+          "instagram-stories",
+          "instagram"
+        ]
+      }
+    },
+    "android": {
+      "package": "com.yourcompany.igcanvasstories",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "plugins": [
+      "expo-camera",
+      "expo-media-library",
+      [
+        "react-native-share",
+        {
+          "ios": [
+            "instagram-stories",
+            "instagram"
+          ],
+          "android": [
+            "com.instagram.android"
+          ]
+        }
+      ]
+    ]
+  }
+}
